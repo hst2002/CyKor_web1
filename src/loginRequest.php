@@ -13,9 +13,9 @@
             echo "password incorrect";
         }
         else{
-            echo "$username login succeed";
             $cookieName = "Loginusername";
-            setcookie($cookieName, $username, time()+3600, "/");
+            setcookie($cookieName, $username, time()+3600, "/"); 
+            echo "$username login succeed";
         }
     }
 ?>
