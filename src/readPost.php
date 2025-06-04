@@ -10,7 +10,7 @@
     <body>
         <a href="index.php">home</a><br>
         <h3><?=$row['title']?></h3>
-        posted by <?=$row['poster']?><br><br>
+        posted by <?=$row['poster']?><br><hr>
         <?=$row['content']?><br><br>
         <?php
             if($row['poster'] == $_COOKIE['Loginusername']){
