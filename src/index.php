@@ -3,8 +3,6 @@
         <title>home</title>
     </head>
     <body>
-        <a href="register.php">register</a>
-        <a href="login.php">login</a>
         <?php 
             if(isset($_COOKIE["Loginusername"])) {
         ?>
@@ -35,6 +33,8 @@
             }
             else{
         ?>
+            <a href="register.php">register</a>
+            <a href="login.php">login</a><br>
             <h3>Login Please</h3>
         <?php
                 
