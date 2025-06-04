@@ -15,12 +15,16 @@
         <?php
             if($row['poster'] == $_COOKIE['Loginusername']){
         ?>
-            <form method='POST' action='editRequest'>
+            <form method='POST' action='editPost.php'>
+                <input type = hidden value =<?=$num?> name = 'postnum'>
                 <input type="submit" value="edit">
             </form>
-            <form method='POST' action='deleteRequest'>
+            <form method='POST' action='deleteRequest.php'>
+                <input type = "hidden" value =<?=$num?> name = 'postnum'>
                 <input type="submit" value="delete">
             </form>
         <?php
             }
         ?>
+    </body>
+</html>
