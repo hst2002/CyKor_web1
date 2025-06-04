@@ -20,7 +20,8 @@
                 else{
                     while($row = $result->fetch_assoc()){
         ?>
-                        <a href="readPost.php?postNum=<?= $row['postnum']?>"><?= $row['title']?></a><br>
+                        <a href="readPost.php?postNum=<?= $row['postnum']?>"><?= $row['title']?></a>
+                            posted by <?=$row['poster']?><br>
         <?php
                     }
                 }
