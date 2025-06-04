@@ -12,3 +12,9 @@ CREATE TABLE IF NOT EXISTS posts(
     title VARCHAR(50),
     content VARCHAR(200)
 );
+
+CREATE TABLE IF NOT EXISTS comments(
+    postnum INT,
+    commenter VARCHAR(50),
+    comment VARCHAR(200)
+);
