@@ -16,7 +16,7 @@
             if($row['poster'] == $_COOKIE['Loginusername']){
         ?>
             <form method='POST' action='editPost.php'>
-                <input type = hidden value =<?=$num?> name = 'postnum'>
+                <input type = "hidden" value =<?=$num?> name = 'postnum'>
                 <input type="submit" value="edit">
             </form>
             <form method='POST' action='deleteRequest.php'>
@@ -26,5 +26,22 @@
         <?php
             }
         ?>
+        <hr>
+        <h4>Comments</h4>
+        <?php
+            $comments = $conn->query("SELECT * FROM comments WHERE postnum = $num");
+            while($row = $comments->fetch_assoc()){
+        ?>
+                <?= $row['comment']?><br>
+                : commented by <?= $row['commenter']?><br><br>
+        <?php
+            }
+        ?>
+
+        <form method='POST' action='comment.php'>
+            <input type = "hidden" name = 'num' value = <?=$num?>>
+            <input type = "text" name = 'comment' style="height:10%">
+            <input type="submit" value="comments">
+        </form>
     </body>
 </html>
